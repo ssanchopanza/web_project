@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Our Menu</title>
+    
+    <!-- External stylesheet for additional styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header section with the site title and navigation menu -->
+    <header>
+        <h1>Bean Haven</h1>
+        <nav>
+            <ul>
+                <!-- Navigation links to other pages -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="whyus.html">Why Us</a></li>
+                <li><a href="career.html">Career</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu section displaying various items with buttons to add to cart -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+
+        <!-- Menu items with descriptions, prices, and "Add to Cart" buttons -->
+        <div class="menu-item" id="classicBrew">
+            <!-- Classic Brew item details -->
+            <h3>Classic Brew</h3>
+            <p>A classic cup of coffee to kickstart your day.</p>
+            <p class="price">€2.50</p>
+            <button onclick="addToCart('Classic Brew', 2.50)">Add to Cart</button>
+        </div>
+
+        <!-- Cappuccino item details -->
+        <div class="menu-item" id="cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Espresso, steamed milk, and a generous foam topping.</p>
+            <p class="price">€3.50</p>
+            <button onclick="addToCart('Cappuccino', 3.50)">Add to Cart</button>
+        </div>
+
+        <!-- Mocha Madness item details -->
+        <div class="menu-item" id="mochaMadness">
+            <h3>Mocha Madness</h3>
+            <p>Espresso, steamed milk, chocolate, and whipped cream.</p>
+            <p class="price">€4.00</p>
+            <button onclick="addToCart('Mocha Madness', 4.00)">Add to Cart</button>
+        </div>
+
+        <!-- Latte Love item details -->
+        <div class="menu-item" id="latteLove">
+            <h3>Latte Love</h3>
+            <p>Smooth espresso with a hint of steamed milk.</p>
+            <p class="price">€3.00</p>
+            <button onclick="addToCart('Latte Love', 3.00)">Add to Cart</button>
+        </div>
+
+        <!-- Affogato Bliss item details -->
+        <div class="menu-item" id="affogatoBliss">
+            <h3>Affogato Bliss</h3>
+            <p>Vanilla ice cream drowned in a shot of hot espresso.</p>
+            <p class="price">€4.50</p>
+            <button onclick="addToCart('Affogato Bliss', 4.50)">Add to Cart</button>
+        </div>
+
+        <!-- Espresso Shot item details -->
+        <div class="menu-item" id="espressoShot">
+            <h3>Espresso Shot</h3>
+            <p>A single shot of strong, concentrated espresso.</p>
+            <p class="price">€2.00</p>
+            <button onclick="addToCart('Espresso Shot', 2.00)">Add to Cart</button>
+        </div>
+
+        <!-- Chocolate Croissant item details -->
+        <div class="menu-item" id="chocolateCroissant">
+            <h3>Chocolate Croissant</h3>
+            <p>Delicious croissant filled with chocolate.</p>
+            <p class="price">€2.50</p>
+            <button onclick="addToCart('Chocolate Croissant', 2.50)">Add to Cart</button>
+        </div>
+
+        <!-- Blueberry Muffin item details -->
+        <div class="menu-item" id="blueberryMuffin">
+            <h3>Blueberry Muffin</h3>
+            <p>Classic muffin with juicy blueberries.</p>
+            <p class="price">€2.00</p>
+            <button onclick="addToCart('Blueberry Muffin', 2.00)">Add to Cart</button>
+        </div>
+
+        <!-- Almond Biscotti item details -->
+        <div class="menu-item" id="almondBiscotti">
+            <h3>Almond Biscotti</h3>
+            <p>Crunchy almond-flavored biscuit, perfect for dipping in coffee.</p>
+            <p class="price">€1.50</p>
+            <button onclick="addToCart('Almond Biscotti', 1.50)">Add to Cart</button>
+        </div>
+
+        <!-- Cart summary displaying the total price and "Order Now" button -->
+        <div class="menu-item" id="total">
+            <h3>Total</h3>
+            <p id="totalPrice">€0.00</p>
+            <button onclick="placeOrder()">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Footer section with copyright information -->
+    <footer>
+        <p>&copy; 2024 Bean Haven Coffee Shop</p>
+    </footer>
+
+    <!-- JavaScript script for handling cart operations -->
+    <script>
+        // Array to store items in the cart
+        let cart = [];
+
+        // Function to add an item to the cart
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            updateTotal();
+        }
+
+        // Function to update the total price in the cart
+        function updateTotal() {
+            let totalPrice = 0;
+
+            // Calculate the total price by summing up item prices
+            for (let item of cart) {
+                totalPrice += item.price;
+            }
+
+            // Update the displayed total price
+            document.getElementById('totalPrice').innerText = `€${totalPrice.toFixed(2)}`;
+        }
+
+        // Function to place an order
+        function placeOrder() {
+            if (cart.length > 0) {
+                // Display a thank you message and clear the cart
+                alert("Order placed! Thank you for choosing Bean Haven.");
+                
+                cart = [];
+                updateTotal();
+            } else {
+                // Display a message if the cart is empty
+                alert("Your cart is empty. Add items before placing an order.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+/* Styles for the "Why Choose Bean Haven?" section */
+#whyus {
+    color: #ffffff;
+    background-color: #333333; /* Change to your desired dark color */
+}
+
+/* Styles for paragraphs within the "Why Choose Bean Haven?" section */
+#whyus p {
+    color: #ffffff;
+}
+
+
+/* Global styles for the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background-image: url("pic1.jpg");*/
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the header section */
+header {
+    background-color: #4d4d4d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styles for the navigation menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Styles for general sections on the page */
+section {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Styles for the home section */
+#home {
+    background: url('main1.gif') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Styles for the menu section */
+#menu {
+    background-image: url("pic3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    color: #ded9d9;
+    padding: 20px;
+}
+
+/* Styles for the contact section */
+#contact {
+    background-image: url("pic2.jpg"); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Styles for forms used in the page */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+form button {
+    background-color: #4d4d4d;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Styles for the career section */
+#career {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("hiring.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    #career {
+        height: auto;
+    }
+}
+
+/* Styles for forms within the career section */
+#career form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#career form input,
+#career form textarea,
+#career form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+#career form button {
+    background-color: #4d4d4d;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Styles for the map image in the contact section */
+#map img {
+    max-width: 60%;
+    height: auto;
+}
+
+/* Styles for the footer section */
+footer {
+    background-color: #4d4d4d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Styles for the slideshow container */
+#slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    /*overflow: hidden;*/
+}
+
+/* Styles for individual slides in the slideshow */
+.slide {
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img{
+    width: 500px;
+    height: 360px;
+}
+
+/* Display the first slide initially */
+.slide:first-child {
+    display: block;
+    opacity: 1;
+}
+
+/* Keyframe animation for fading slides */
+@keyframes fade {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+/* Animation for fading slides in the slideshow */
+.fade {
+    animation: fade 4s infinite;
+}

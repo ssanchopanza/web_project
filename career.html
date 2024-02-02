@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Career Opportunities - Bean Haven</title>
+
+    <!-- External stylesheet for additional styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal styles specific to this page -->
+    <style>
+        /* Global styles for the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("hiring.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Styles for the header section */
+        header {
+            background-color: #4d4d4d;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Styles for the navigation menu */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Styles for the main content sections */
+        section {
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Styles for the career section */
+        #career {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            color: #ded9d9;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Styles for the career form within the career section */
+        #career form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #career form input,
+        #career form textarea,
+        #career form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        #career form button {
+            background-color: #4d4d4d;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Styles for the footer section */
+        footer {
+            background-color: #4d4d4d;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section with navigation menu -->
+    <header>
+        <h1>Bean Haven</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="whyus.html">Why Us</a></li>
+                <li><a href="career.html">Career</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section introducing career opportunities -->
+    <section>
+        <h2>Join Our Team at Bean Haven</h2>
+        <p style="font-size: 18px;">At Bean Haven, we're passionate about coffee and always on the lookout for talented individuals to join our team. If you have a love for great coffee and want to be a part of our journey, explore career opportunities with us.</p>
+    </section>
+
+    <!-- Career section with a form for submitting CV -->
+    <section id="career">
+        <h2>Upload Your CV</h2>
+        <p style="font-size: 18px;">Share your skills and experiences with us by uploading your CV. Join Bean Haven and be a part of our coffee-loving team!</p>
+
+        <!-- Form for CV submission -->
+        <form action="/submit_cv" method="post" enctype="multipart/form-data">
+            <label for="cv">Upload your CV:</label>
+            <input type="file" name="cv" id="cv" accept=".pdf, .doc, .docx" required>
+            <input type="submit" value="Submit CV">
+        </form>
+    </section>
+
+    <!-- Footer section with copyright information -->
+    <footer>
+        <p>&copy; 2024 Bean Haven Coffee Shop</p>
+    </footer>
+
+</body>
+
+</html>
